@@ -12,4 +12,8 @@ print('請問 sky 的位置: %d' % words.find('sky'))
 array = words.split(' ')
 print(array, len(array))
 print(array[3])
+# 替換
+# 把 sea 替還成 ocean
+new_words = words.replace('sea', 'ocean')
+print(new_words)
 
