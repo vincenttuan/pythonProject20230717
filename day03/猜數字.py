@@ -1,6 +1,7 @@
 # 1~9 猜數字
 # 若猜得比答案小 -> 顯示猜小了
 # 若猜得比答案大 -> 顯示猜大了
+# 若猜三次仍沒猜出來要顯示 GG
 import random
 answer = random.randint(1, 9)
 count = 3
