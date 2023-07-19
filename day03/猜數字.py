@@ -2,10 +2,11 @@
 # 若猜得比答案小 -> 顯示猜小了
 # 若猜得比答案大 -> 顯示猜大了
 # 若猜三次仍沒猜出來要顯示 "Sorry 次數已用完您沒猜對"
+# 使用者所猜的數字範圍必須在 1~9 之間才有效才能進行答案比對
 import random
 answer = random.randint(1, 9)
 count = 3
-print('answer =', answer)
+#print('answer =', answer)
 while count > 0:
     # 請玩家猜
     user_guess = int(input('玩家 1~9 請猜一個數字:'))
