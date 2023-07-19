@@ -19,6 +19,17 @@ while count > 0:
     else:
         print('玩家答對了')
         break
+    # 請電腦猜
+    pc_guess = random.randint(1, 9)
+    print('電腦 1~9 請猜一個數字:%d' % pc_guess)
+    # 比對答案
+    if pc_guess > answer:
+        print('電腦猜大了')
+    elif pc_guess < answer:
+        print('電腦猜小了')
+    else:
+        print('電腦答對了')
+        break
 
     # 判斷是否 GG
     if count == 0:
