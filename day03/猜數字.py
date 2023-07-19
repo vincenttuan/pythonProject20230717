@@ -19,5 +19,7 @@ while count > 0:
     else:
         print('玩家答對了')
         break
-
+    # 判斷是否 GG
+    if count == 0:
+        print("GG")
 
