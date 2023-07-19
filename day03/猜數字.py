@@ -10,6 +10,10 @@ count = 3
 while count > 0:
     # 請玩家猜
     user_guess = int(input('玩家 1~9 請猜一個數字:'))
+    # 先檢查玩家所猜的數字是否是在合理的範圍 ?
+    if user_guess < 1 or user_guess > 9:
+        print('您輸入的數字超過有效範圍')
+        continue
     # count 扣掉一次
     count = count - 1
     # 比對答案
