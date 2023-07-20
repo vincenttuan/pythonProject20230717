@@ -13,4 +13,8 @@ print(student1)
 # 刪除元素 'birth'
 del student1['birth']
 print(student1)
+# 取出元素來使用, 取出後該元素就不會留在原始數組中
+score = student1.pop('score')
+print(score)
+print(student1)
 
