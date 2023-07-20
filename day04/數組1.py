@@ -12,3 +12,9 @@ a.remove(5)  # 移除元素(5是指元素的內容)
 print(a)
 a.__delitem__(2)  # 移除元素(2是指元素的位置)
 print(a)
+a.reverse()  # 資料反轉
+print(a)
+a.sort()  # 資料排序(小->大), 自然排序
+print(a)
+print('max:', max(a))  # 取得最大值
+print('min:', min(a))  # 取得最小值
