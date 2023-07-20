@@ -11,7 +11,7 @@ total_salary = sum(emp['salary'] for emp in employees)
 print(total_salary)
 # 請問誰(name)的薪資最高 ?
 highest_salary = 0
-highest_name = ''
+highest_name = None
 # 透過替換法
 for emp in employees:  # 輪詢每一個員工
     if emp['salary'] > highest_salary:
