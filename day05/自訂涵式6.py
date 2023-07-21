@@ -21,3 +21,4 @@ if __name__ == '__main__':
     w = float(input('請輸入體重kg:'))
     bmi, result = get_bmi_and_result(h, w)
     print(bmi, result)
+
