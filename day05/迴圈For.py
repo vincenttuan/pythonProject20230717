@@ -21,5 +21,15 @@ print()
 scores = [100, 90, 80, 70, 60]
 for score in scores:
     print(score, end=" ")
+#-----------------------------------
+print()
+for score in [100, 90, 80, 70, 60]:
+    print(score, end=" ")
+#-----------------------------------
+print()
+# 印出每一個元素內容與項次
+for i, score in enumerate([100, 90, 80, 70, 60]):
+    print(i, score)
+
 
 
