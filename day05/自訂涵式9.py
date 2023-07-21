@@ -5,7 +5,7 @@ def get_sum(*num):
     return sum(num)
 
 
-def fun(**kwargs):  # ** 支援字典格式
+def fun(**kwargs):  # ** 支援字典格式 (kwargs = keyword arguments)
     for key, vale in kwargs.items():
         print(key, vale)
 
