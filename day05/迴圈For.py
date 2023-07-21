@@ -15,4 +15,11 @@ for i in range(1, 5):
 print()
 for i in range(1, 10, 2):
     print(i, end=" ")
+#-----------------------------------
+print()
+# for-loop 與數組的關係
+scores = [100, 90, 80, 70, 60]
+for score in scores:
+    print(score, end=" ")
+
 
