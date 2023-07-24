@@ -5,5 +5,6 @@ Mole 75000
 Acer 85000
 Rose 38000
 Helen 77000
-Jo 56000
+Jo 99999
 Happy 88000
+Ada 71000
