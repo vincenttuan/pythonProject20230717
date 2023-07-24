@@ -1,5 +1,5 @@
 # 自訂函數: * 與 **
-def play_ground(name, age, *person, **ticket) :
+def play_ground(name, age, *person, **ticket):
     print(name, type(name))
     print(age, type(age))
     print(person, type(person))
