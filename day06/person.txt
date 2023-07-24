@@ -1,0 +1,6 @@
+John 25
+Mary 32
+Jack 58
+Rose 40
+Mole 15
+Acer 18
