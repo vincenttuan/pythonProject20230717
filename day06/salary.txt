@@ -1,0 +1,5 @@
+John 45000
+Mary 55000
+Jack 65000
+Mole 75000
+Acer 85000
