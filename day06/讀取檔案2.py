@@ -15,3 +15,12 @@ pattern = re.compile(r'(\w+)\s(\d+)')
 matches = pattern.findall(content)
 print(matches)
 
+# 計算總年齡
+total_age = sum(int(age) for name, age in matches)
+
+# 計算平均年齡
+average_age = total_age / len(matches)
+
+print('資料筆數:', len(matches))
+print('總年齡:', total_age)
+print('平均年齡:', average_age)
