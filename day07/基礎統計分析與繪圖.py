@@ -24,12 +24,12 @@ if __name__ == '__main__':
     print("{} 的分散程度大".format('salary' if salaries_cv > ages_cv else 'age'))
 
     # 繪製統計圖表
-    all_salaries = salaries.values()
+    all_salaries = [salary//1000 for salary in salaries.values()]  # 將薪資除以 1000
     all_ages = ages.values()
     all_names = ages.keys()
     print(all_salaries, all_ages, all_names)
 
-    plt.plot(all_names, all_salaries)
-    plt.plot(all_names, all_ages)
-
+    plt.plot(all_names, all_salaries, label='salary(K)')
+    plt.plot(all_names, all_ages, label='age')
+    plt.legend()  # 加上圖例
     plt.show()
