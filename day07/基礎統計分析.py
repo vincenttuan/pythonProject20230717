@@ -8,11 +8,12 @@ def get_from_file(file_name):
     # 將每一筆放到 dict 的結構中
     # {'John': 45000, 'Mary': 55000, 'Jack': 65000, 'Mole': 75000, 'Acer': 85000}
     # 利用正則表達式來表達
-    result = {name: int(salary) for name, salary in re.findall(r'(\w+)\s(\d+)', file.read())}
+    result = {name: int(value) for name, value in re.findall(r'(\w+)\s(\d+)', file.read())}
     return result
 
 if __name__ == '__main__':
-    result = get_from_file('salary.txt')
+    #result = get_from_file('salary.txt')
+    result = get_from_file('age.txt')
     print(result)
     print(result.keys())  # 所有的 key
     print(result.values())  # 所有的 value
