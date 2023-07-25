@@ -13,6 +13,11 @@ def get_cv(values):
 if __name__ == '__main__':
     salaries = get_from_file('salary.txt')
     ages = get_from_file('age.txt')
-    print(salaries, 'cv =', get_cv(salaries.values()))
-    print(ages, 'cv =', get_cv(ages.values()))
 
+    salaries_cv = get_cv(salaries.values())
+    ages_cv = get_cv(ages.values())
+
+    print(salaries, 'cv =', salaries_cv)
+    print(ages, 'cv =', ages_cv)
+
+    print("{} 的分散程度大".format('salary' if salaries_cv > ages_cv else 'age'))
