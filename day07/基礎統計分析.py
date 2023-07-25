@@ -19,15 +19,15 @@ if __name__ == '__main__':
     print(result.values())  # 所有的 value
 
     salaries = result.values()
-    print('薪資總和: {:,}'.format(sum(salaries)))
-    print('薪資最高: {:,}'.format(max(salaries)))
-    print('薪資最低: {:,}'.format(min(salaries)))
+    print('總和: {:,}'.format(sum(salaries)))
+    print('最高: {:,}'.format(max(salaries)))
+    print('最低: {:,}'.format(min(salaries)))
     # 透過統計涵式來計算
-    print('薪資平均: {:,}'.format(stat.mean(salaries)))
-    print('薪資平均: {:,}'.format(stat.fmean(salaries)))  # 浮點數快速平均
-    print('薪資中位數: {:,}'.format(stat.median(salaries)))
-    print('薪資標準差: {:,}'.format(stat.stdev(salaries)))
-    print('薪資變異係數: {:,}'.format(stat.stdev(salaries)/stat.mean(salaries)))
+    print('平均: {:,}'.format(stat.mean(salaries)))
+    print('浮點平均: {:,}'.format(stat.fmean(salaries)))  # 浮點數快速平均
+    print('中位數: {:,}'.format(stat.median(salaries)))
+    print('標準差: {:,}'.format(stat.stdev(salaries)))
+    print('變異係數: {:,}'.format(stat.stdev(salaries)/stat.mean(salaries)))
 
 
 
