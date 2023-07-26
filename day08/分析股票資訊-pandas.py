@@ -44,16 +44,17 @@ names = data.loc[condition, '證券名稱'].tolist()
 print(names)
 
 # 透過 LineNotify 通知客戶
-token = ''
+token = 'Qk9xIdAgvAyivGGqneRRWtuHgTAu16dbkMNxCkAGAUr'
 url = 'https://notify-api.line.me/api/notify'
 headers = {
     "Authorization": "Bearer " + token
 }
 # 輸入要傳送的內容
 # msg = "颱風來了~~ "
-msg = symbols + names
+# msg = symbols + names
+msg = "最新颱風動態 https://www.youtube.com/watch?v=EqfBQiODfu8"
 package_id = '6136'
-stick_id = '10551378'
+stick_id = '10551377'
 
 payload = {
     "message": msg,
