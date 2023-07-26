@@ -25,5 +25,19 @@ if __name__ == '__main__':
         row = row.split(',')
         #print(len(row))
         if len(row) == 8:
-            print(row)
+            # 證券代號 證券名稱 殖利率 股利年度 本益比 股價淨值比 財報
+            try:
+                stock = {}
+                stock.setdefault('證券代號', row[0])
+                stock.setdefault('證券名稱', row[1])
+                stock.setdefault('殖利率', float(row[2]))
+                stock.setdefault('股利年度', row[3])
+                stock.setdefault('本益比', float(row[4]))
+                stock.setdefault('股價淨值比', float(row[5]))
+                stock.setdefault('財報', row[6])
+                # 將 stock 加入到 twii
+                twii.append(stock)
+            except ValueError:
+                pass
+        print(twii)
 
