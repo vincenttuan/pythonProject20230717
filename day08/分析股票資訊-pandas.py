@@ -34,3 +34,12 @@ condition = (data['本益比'] > 0) & (data['本益比'] <= 12) & \
 
 # 使用條件過濾數據並打印結果
 print(data[condition])
+
+# 只想印出證券代號
+symbols = data.loc[condition, '證券代號'].tolist()
+print(symbols)
+
+# 只想印出證券名稱
+names = data.loc[condition, '證券名稱'].tolist()
+print(names)
+
