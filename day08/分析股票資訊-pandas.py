@@ -43,3 +43,22 @@ print(symbols)
 names = data.loc[condition, '證券名稱'].tolist()
 print(names)
 
+# 透過 LineNotify 通知客戶
+token = ''
+url = 'https://notify-api.line.me/api/notify'
+headers = {
+    "Authorization": "Bearer " + token
+}
+# 輸入要傳送的內容
+# msg = "颱風來了~~ "
+msg = symbols + names
+package_id = '6136'
+stick_id = '10551378'
+
+payload = {
+    "message": msg
+}
+# 傳送到 LineNotify
+# result 可以得到回應結果, 若看到 200 表示 OK
+result = requests.post(url, headers=headers, params=payload)
+print('LineNotify result:', result)
