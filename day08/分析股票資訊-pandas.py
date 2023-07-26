@@ -1,7 +1,7 @@
 import pandas as pd
 
 # 讀取本地的 CSV 檔
-data = pd.read_csv('BWIBBU_d_ALL_20230725.csv', header=1, encoding='utf-8')
+data = pd.read_csv('BWIBBU_d_ALL_20230725_utf8.csv', header=1, encoding='utf-8')
 
 # 列印 DataFrame 的欄位名稱
 print(data.columns)
