@@ -39,5 +39,12 @@ if __name__ == '__main__':
                 twii.append(stock)
             except ValueError:
                 pass
-        print(twii)
-
+        #print(twii)
+        # 若要買一檔股票, 以下是教課書給的意見參數
+        # 本益比 <= 12
+        # 殖利率 >= 7
+        # 股價淨值比 <= 1
+        for t in twii:
+            # 考慮除去有負值的資料
+            if 0 < t['本益比'] <= 12 and t['殖利率'] >= 7 and 0 < t['股價淨值比'] <= 1:
+                print(t)
