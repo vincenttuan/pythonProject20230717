@@ -4,7 +4,7 @@ import pandas as pd
 data = pd.read_csv('BWIBBU_d_ALL_20230725_utf8.csv', header=1, encoding='utf-8')
 
 # 列印 DataFrame 的欄位名稱
-print(data.columns)
+#print(data.columns)
 
 # 將 '-' 換成 NaN
 data.replace('-', float('NaN'), inplace=True)
