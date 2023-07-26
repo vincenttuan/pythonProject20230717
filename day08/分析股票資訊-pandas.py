@@ -56,7 +56,9 @@ package_id = '6136'
 stick_id = '10551378'
 
 payload = {
-    "message": msg
+    "message": msg,
+    "stickerPackageId": package_id,
+    "stickerId": stick_id
 }
 # 傳送到 LineNotify
 # result 可以得到回應結果, 若看到 200 表示 OK
