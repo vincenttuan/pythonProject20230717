@@ -1,6 +1,14 @@
 import tkinter as tk
 from tkinter import ttk
 
+# 創建一個計算 bmi 資料的涵式
+def calculate_bmi():
+    h = float(height_entry.get())  # 因為 height_entry.get() 是字串所以要轉 float
+    w = float(weight_entry.get())  # 因為 weight_entry.get() 是字串所以要轉 float
+    bmi = w / (h/100)**2
+    result_label['text'] = f'您的 BMI 是: {bmi:.2f}'
+
+
 # 創建一個新視窗並設定標題
 window = tk.Tk()
 window.title('BMI 計算器')
@@ -19,7 +27,7 @@ weight_label.grid(row=1, column=0, sticky='w', padx=5, pady=5)
 weight_entry = tk.Entry(window)  # 輸入框
 weight_entry.grid(row=1, column=1, sticky='ew', padx=5, pady=5)
 
-submit_button = tk.Button(window, text="計算 BMI")
+submit_button = tk.Button(window, text="計算 BMI", command=calculate_bmi)
 submit_button.grid(row=2, column=0, columnspan=2, sticky='ew', padx=5, pady=5)
 
 result_label = tk.Label(window, text='結果顯示會在這裡')
