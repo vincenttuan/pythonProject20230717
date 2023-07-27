@@ -57,7 +57,7 @@ history_treeview.heading('BMI', text='BMI')
 # 利用 gird 布局 history_treeview
 history_treeview.grid(row=4, column=0, columnspan=2, sticky='nsew', padx=5, pady=5)
 # 利用 gird 布局 scrollbar
-scrollbar.grid(row=4, column=2, sticky='ns', padx=5, pady=5)
+scrollbar.grid(row=4, column=2, sticky='ns', padx=0, pady=5)
 
 # 開始主循環
 window.mainloop()
