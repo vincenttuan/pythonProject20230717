@@ -7,7 +7,10 @@ def calculate_bmi():
     w = float(weight_entry.get())  # 因為 weight_entry.get() 是字串所以要轉 float
     bmi = w / (h/100)**2
     result_label['text'] = f'您的 BMI 是: {bmi:.2f}'
-
+    # 將計算結果 insert 到 history_treeview 中
+    # history_treeview.get_children().__len__() 表示目前在 history_treeview 有幾筆
+    id = history_treeview.get_children().__len__() + 1
+    history_treeview.insert('', 'end', values=(id, h, w, f'{bmi:.2f}'))
 
 # 創建一個新視窗並設定標題
 window = tk.Tk()
@@ -35,6 +38,13 @@ result_label.grid(row=3, column=0, columnspan=2, sticky='ew', padx=5, pady=5)
 
 # 創建一個 treeview 來顯示計算結果的歷史紀錄
 history_treeview = ttk.Treeview(window, columns=('序號', '身高', '體重', 'BMI'), show='headings')
+
+# 創建一個 scrollbar 給 treeview 用
+scrollbar = ttk.Scrollbar(window, orient="vertical", command=history_treeview.yview)
+
+# 連接 scrollbar 與 history_treeview
+history_treeview.configure(yscrollcommand=scrollbar.set)
+
 # 定義每一個欄位與標題
 history_treeview.column('序號', width=50)
 history_treeview.column('身高', width=100)
@@ -46,6 +56,8 @@ history_treeview.heading('體重', text='體重')
 history_treeview.heading('BMI', text='BMI')
 # 利用 gird 布局 history_treeview
 history_treeview.grid(row=4, column=0, columnspan=2, sticky='nsew', padx=5, pady=5)
+# 利用 gird 布局 scrollbar
+scrollbar.grid(row=4, column=2, sticky='ns', padx=5, pady=5)
 
 # 開始主循環
 window.mainloop()
