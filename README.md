@@ -9,7 +9,6 @@
 pip install pillow
 
 二、安裝 py-opencv :
-安裝:
 pip install opencv-python
 pip install opencv-contrib-python
 </pre>
