@@ -6,7 +6,7 @@
 # 安裝 Python
 <pre>
 https://www.python.org/downloads/
-https://www.jetbrains.com/pycharm/download/?section=windows  
+https://www.jetbrains.com/pycharm/download/ 
 </pre>
 
 # 安裝 OpenCV 步驟
