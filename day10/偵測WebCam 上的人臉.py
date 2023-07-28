@@ -34,6 +34,9 @@ while True:
     for (x, y, w, h) in faces:
         # 繪製參數 frame, 左上角座標, 右下角座標, BGR色碼, 框線的寬度
         cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        # 繪文字
+        cv2.putText(frame, 'Vincent', (x, y-7), 16, 1.2, (255, 255, 255), 2)
+
         # 在 face 內進行眼睛偵測
         # 建立 roi 人臉區域
         roi_color = frame[y:y + h, x:x + w]  # 人臉區域-彩色(y, x)
