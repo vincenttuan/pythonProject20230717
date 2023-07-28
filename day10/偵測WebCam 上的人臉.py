@@ -53,7 +53,7 @@ while True:
     # --------------------------------------------------------------------------
 
     # 將 frame 顯示
-    cv2.imshow('My Face', gray)
+    cv2.imshow('My Face', frame)
     # 按下 q 離開
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
