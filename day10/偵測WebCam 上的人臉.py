@@ -50,17 +50,18 @@ while True:
         for (ex, ey, ew, eh) in eyes:
             cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 0, 255), 2)
 
-        # 微笑偵測
-        smile = smile_cascade.detectMultiScale(
-            roi_gray,
-            scaleFactor=1.1,
-            minNeighbors=5,
-            minSize=(30, 30),
-            flags=cv2.CASCADE_SCALE_IMAGE
-        )
-        # 進行微笑區域框線繪製
-        for (sx, sy, sw, sh) in smile:
-            cv2.rectangle(roi_color, (sx, sy), (sx + sw, sy + sh), (255, 0, 0), 2)
+            # 微笑偵測
+            smile = smile_cascade.detectMultiScale(
+                roi_gray,
+                scaleFactor=1.1,
+                minNeighbors=5,
+                minSize=(30, 30),
+                flags=cv2.CASCADE_SCALE_IMAGE
+            )
+            # 進行微笑區域框線繪製
+            for (sx, sy, sw, sh) in smile:
+                if sy > ey:  # 判定繪製的嘴巴一定在眼睛下面
+                    cv2.rectangle(roi_color, (sx, sy), (sx + sw, sy + sh), (255, 0, 0), 2)
     # --------------------------------------------------------------------------
 
     # 將 frame 顯示
