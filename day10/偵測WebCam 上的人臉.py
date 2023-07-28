@@ -46,7 +46,7 @@ while True:
             minSize=(30, 30),
             flags=cv2.CASCADE_SCALE_IMAGE
         )
-        # 進行眼睛框限繪製
+        # 進行眼睛框線繪製
         for (ex, ey, ew, eh) in eyes:
             cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 0, 255), 2)
 
